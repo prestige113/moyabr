@@ -1,0 +1,13 @@
+.Autocomplect {
+    position: relative;
+    width: 100%;
+}
+
+.menuItem {
+    position: absolute;
+    z-index: 100;
+}
+.textField{
+    border: 1px solid  #87979c;
+    border-radius: 0px;
+}
