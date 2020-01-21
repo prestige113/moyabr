@@ -12,7 +12,7 @@ export default class CitiesCards extends React.Component {
         return (
             <div key={city.cityName} className="card--city--weather">
                 <div className="card--city--element--header">
-                    <Typography variant="h5">
+                    <Typography className="text-font">
                         {city.cityName}
                     </Typography>
                     <Close/>

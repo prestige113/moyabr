@@ -27,7 +27,8 @@ export default class AutosuggestionInput extends React.Component {
 
     render() {
         return (<div className="Autocomplect">
-            <TextField className="textField" value={this.props.value.city} onChange={this.handleInputChange} variant="outlined" />
+            <TextField className="text-font" value={this.props.value.city} onChange={this.handleInputChange}
+                       variant="outlined"/>
             <div className="menuItem">
                 {this.state.isOpen && <Paper>
                     <List>

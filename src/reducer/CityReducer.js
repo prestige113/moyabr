@@ -12,7 +12,7 @@ export default function reducer(state = initialState, action) {
         }
         case ActionsTypes.MONITORING_LOADED: {
             return {
-                ...state, selectCities: [...state.selectCities.filter(c => c.name !== action.payload.name),
+                ...state, selectCities: [...state.selectCities.filter(c => c.cityName !== action.payload.cityName),
                     action.payload
                 ]
             };

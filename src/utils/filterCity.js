@@ -1,9 +1,11 @@
 import {city} from './russia';
 
 export const filterCity = (value) => {
-    return city.filter(c => {
-        return c.city.substring(0, value.length) === value;
-    });
+    if (value.length > 0)
+        return city.filter(c => {
+            return c.city.substring(0, value.length) === value;
+        });
+    else return [];
 };
 export const createMonitoringRandom = (city) => {
     const temperature = (Math.random() * 30) * (Math.random() > 0.5 ? -1 : 1);
