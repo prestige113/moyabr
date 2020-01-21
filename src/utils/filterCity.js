@@ -12,29 +12,27 @@ export const createMonitoringRandom = (city) => {
         temperature: temperature.toFixed(0),
         wind: (Math.random() * 10).toFixed(0),
         pressure: 800 - (Math.random() * 100).toFixed(0),
-        type: typesWeather.find(w => w.t1 < temperature && w.t2 >= temperature),
+        type: typesWeather.find(w => w.t1 < temperature.toFixed(0) && w.t2 >= temperature.toFixed(0)),
         cityName: city.city
     };
-    console.log(cityTemperature);
     return cityTemperature;
 };
 
-const typesWeather =
-    [
-        {
-            t1: 5,
-            t2: 50,
-            type: 'sunshine'
-        },
-        {
-            t1: 0,
-            t2: 5,
-            type: 'rain'
-        },
-        {
-            t1: -30,
-            t2: 0,
-            type: 'show'
-        }
-    ];
+const typesWeather = [
+    {
+        t1: 5,
+        t2: 50,
+        type: 'sunshine'
+    },
+    {
+        t1: -31,
+        t2: 5,
+        type: 'rain'
+    },
+    /*{
+        t1: -31,
+        t2: 0,
+        type: 'snow'
+    }*/
+];
 
