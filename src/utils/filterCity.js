@@ -5,16 +5,18 @@ export const filterCity = (value) => {
         return c.city.substring(0, value.length) === value;
     });
 };
-export const createMonitoringRandom = (name) => {
-    const temperature = Math.random() * 30 * (Math.random() > 0.5 ? -1 : 1);
+export const createMonitoringRandom = (city) => {
+    const temperature = (Math.random() * 30) * (Math.random() > 0.5 ? -1 : 1);
 
     const cityTemperature = {
-        temperature: temperature,
-        wind: Math.random() * 10,
-        pressure: 800 - Math.random() * 100,
+        temperature: temperature.toFixed(0),
+        wind: (Math.random() * 10).toFixed(0),
+        pressure: 800 - (Math.random() * 100).toFixed(0),
         type: typesWeather.find(w => w.t1 < temperature && w.t2 >= temperature),
-        cityName: name
+        cityName: city.city
     };
+    console.log(cityTemperature);
+    return cityTemperature;
 };
 
 const typesWeather =
@@ -32,7 +34,7 @@ const typesWeather =
         {
             t1: -30,
             t2: 0,
-            type: 'rain'
+            type: 'show'
         }
     ];
 

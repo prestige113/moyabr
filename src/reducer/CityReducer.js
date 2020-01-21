@@ -11,7 +11,11 @@ export default function reducer(state = initialState, action) {
             return {...state, cities: action.payload};
         }
         case ActionsTypes.MONITORING_LOADED: {
-            return {...state, selectCities: action.payload};
+            return {
+                ...state, selectCities: [...state.selectCities,
+                    action.payload
+                ]
+            };
         }
         default:
             return state;
