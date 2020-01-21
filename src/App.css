@@ -35,6 +35,25 @@
     color: #61dafb;
 }
 
+.card--city--weather {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    padding: 5px;
+    margin-left: 15px;
+    border: 1px solid black;
+}
+
+.card--city--element--header {
+    display: inherit;
+    width: 100%;
+    justify-content: space-between;
+}
+.card--city--element {
+    display: inherit;
+    width: 100%;
+}
+
 .cities-cards {
     box-sizing: border-box;
     display: flex;
