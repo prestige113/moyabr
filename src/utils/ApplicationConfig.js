@@ -1,6 +1,6 @@
 const ApplicationConfig = (() => {
     let instance;
-    const WEATHER_URL = 'https://api.gismeteo.net/v2/search/cities/?';
+    const WEATHER_URL = 'http://localhost:3001/v1';
     const WEATHER_TOKEN = '56b30cb255.3443075';
 
     const setProperty = (prop, value) => {

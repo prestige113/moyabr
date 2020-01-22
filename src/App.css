@@ -51,6 +51,10 @@
     margin-left: 15px;
     border: 1px solid black;
 }
+.img{
+    max-width: 60px;
+    height: 60px;
+}
 
 .card--city--element--header {
     display: inherit;
@@ -61,6 +65,7 @@
 .card--city--element {
     display: inherit;
     width: 100%;
+    align-items: center;
 }
 
 .cities-cards {

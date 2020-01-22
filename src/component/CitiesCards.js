@@ -19,10 +19,10 @@ export default class CitiesCards extends React.Component {
                 </div>
                 <div className="card--city--element">
                     {city.type.type === 'sunshine' &&
-                    <img src={Sun} alt="sun"/>
+                    <img className="img" src={Sun} alt="sun"/>
                     }
                     {city.type.type === 'rain' &&
-                    <img src={Cloud} alt="rain"/>
+                    <img className="img" src={Cloud} alt="rain"/>
                     }
                     <Typography variant="h4">{city.temperature} °С</Typography>
                 </div>

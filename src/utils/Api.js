@@ -1,9 +1,8 @@
 import axios from 'axios';
-import applicationConfig from './ApplicationConfig'
+import applicationConfig from './ApplicationConfig';
 
 function fetchJson(url) {
-    console.log(applicationConfig)
-    return axios.get(`${applicationConfig.WEATHER_URL}${url}`, {headers: {'X-Gismeteo-Token': applicationConfig.WEATHER_TOKEN}})
+    return axios.get(`${applicationConfig.WEATHER_URL}${url}`)
         .then(response => {
             return response.data;
         })
@@ -22,11 +21,15 @@ function fetchJson(url) {
         });
 }
 
-function getWeatherByCities(city) {
-    console.log('loaded', city);
-    return fetchJson(`query=${city}`);
+function filterCity(city) {
+    return fetchJson(`/search?query=${city}`);
+}
+
+function getWeather(city) {
+    return fetchJson(`/weather?query=${city}`);
 }
 
 export default {
-    getWeatherByCities
-}
+    filterCity,
+    getWeather
+};

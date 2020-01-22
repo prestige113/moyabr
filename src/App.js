@@ -20,7 +20,7 @@ class App extends React.Component {
     };
 
     addCity = () => {
-        this.props.addCityToMonitoring(this.state.valueCity);
+        this.props.addCityToMonitoring(this.state.valueCity.city);
     };
 
     render() {
